@@ -1,0 +1,126 @@
+[
+ {
+  "pk": 1, 
+  "model": "studentgroups.group", 
+  "fields": {
+   "praepostor": 1, 
+   "title": "Group1"
+  }
+ }, 
+ {
+  "pk": 2, 
+  "model": "studentgroups.group", 
+  "fields": {
+   "praepostor": 6, 
+   "title": "Group2"
+  }
+ }, 
+ {
+  "pk": 3, 
+  "model": "studentgroups.group", 
+  "fields": {
+   "praepostor": 9, 
+   "title": "Group3"
+  }
+ },
+ {
+  "pk": 1, 
+  "model": "studentgroups.student", 
+  "fields": {
+   "student_number": "3573787856", 
+   "birthday": "2012-07-01", 
+   "group": 1, 
+   "full_name": "Student11"
+  }
+ }, 
+ {
+  "pk": 2, 
+  "model": "studentgroups.student", 
+  "fields": {
+   "student_number": "3683587656", 
+   "birthday": "2012-07-02", 
+   "group": 1, 
+   "full_name": "Student12"
+  }
+ }, 
+ {
+  "pk": 3, 
+  "model": "studentgroups.student", 
+  "fields": {
+   "student_number": "3059669611", 
+   "birthday": "2012-07-03", 
+   "group": 1, 
+   "full_name": "Student13"
+  }
+ }, 
+ {
+  "pk": 4, 
+  "model": "studentgroups.student", 
+  "fields": {
+   "student_number": "6822598234", 
+   "birthday": "2012-07-04", 
+   "group": 1, 
+   "full_name": "Student14"
+  }
+ }, 
+ {
+  "pk": 5, 
+  "model": "studentgroups.student", 
+  "fields": {
+   "student_number": "2495846873", 
+   "birthday": "2012-07-05", 
+   "group": 1, 
+   "full_name": "Student15"
+  }
+ }, 
+ {
+  "pk": 6, 
+  "model": "studentgroups.student", 
+  "fields": {
+   "student_number": "1049325984", 
+   "birthday": "2012-06-01", 
+   "group": 2, 
+   "full_name": "Student21"
+  }
+ }, 
+ {
+  "pk": 7, 
+  "model": "studentgroups.student", 
+  "fields": {
+   "student_number": "3466686467", 
+   "birthday": "2012-06-02", 
+   "group": 2, 
+   "full_name": "Student22"
+  }
+ }, 
+ {
+  "pk": 8, 
+  "model": "studentgroups.student", 
+  "fields": {
+   "student_number": "8132751743", 
+   "birthday": "2012-06-03", 
+   "group": 2, 
+   "full_name": "Student23"
+  }
+ }, 
+ {
+  "pk": 9, 
+  "model": "studentgroups.student", 
+  "fields": {
+   "student_number": "1240932582", 
+   "birthday": "2012-05-01", 
+   "group": 3, 
+   "full_name": "Student31"
+  }
+ }, 
+ {
+  "pk": 10, 
+  "model": "studentgroups.student", 
+  "fields": {
+   "student_number": "2350924385", 
+   "birthday": "2012-05-02", 
+   "group": 3, 
+   "full_name": "Student32"
+  }
+ }
+]

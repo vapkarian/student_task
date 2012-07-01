@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+  <h2>List of student groups</h2>
+  <table border=1 cellpadding=3>
+    <tr>
+      <th align="center">Title</th>
+      <th align="center">Count</th>
+      <th align="center">Praepostor</th>
+	  <th align="center">Actions</th>
+    </tr>
+    {% for group in groups %}
+      <tr>
+        <td align="left"><a href="/groups/{{ group.id }}">{{ group.title }}</a></td>
+        <td align="center">{{ group.count }}</td>
+        <td align="left">{{ group.praepostor }}</td>
+		<td align="left"><a href="/admin/studentgroups/group/{{ group.id }}/">Change</a> <a href="/admin/studentgroups/group/{{ group.id }}/delete/">Delete</a></td>
+      </tr>
+    {% endfor %}
+  </table>
+  <p><a href="/admin/studentgroups/group/add/">Add new group</a></p>
+{% endblock %}

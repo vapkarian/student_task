@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+  <h2>Students of group {{ group.title }}</h2>
+  <table border=1 cellpadding=3>
+    <tr>
+      <th align="center">Full name</th>
+      <th align="center">Birthday</th>
+      <th align="center">Number</th>
+	  <th align="center">Actions</th>
+	  <th align="center">Last action</th>
+    </tr>
+    {% for student in students %}
+      <tr>
+        <td align="left">{{ student.full_name }}</td>
+        <td align="left">{{ student.birthday }}</td>
+        <td align="left">{{ student.student_number }}</td>
+		<td align="left"><a href="/admin/studentgroups/student/{{ student.id }}/">Change</a> <a href="/admin/studentgroups/student/{{ student.id }}/delete/">Delete</a></td>
+        <td align="left">{{ student.last_action }}</td>
+	  </tr>
+    {% endfor %}
+  </table>
+  <p><a href="/admin/studentgroups/student/add/?group={{ group.id }}">Add new student</a></p>
+  {% load edit_link %}
+      {% edit_link group %}
+{% endblock %}
