@@ -1,0 +1,12 @@
+Middlewares: QueryStatistic на всех страницах добавляет количество и время SQL запросов.
+
+Context Processors: django.conf.settings добавлено в контекст шаблонов.
+
+Templatetags: edit_link принимает любой объект и рендерит ссылку на его изменение в панели администратора. Пример: {% load edit_link %}{% edit_link user.profile %}
+
+Signals: django_history - модифицированное (упрощенное) open-source приложение для хранения в базе записей и создании/редактировании/удалении объектов. Необходимо добавить следущую строку для импорта поля истории в файле моделей: 'from django_history.models import HistoricalRecords'. Необходимо добавить данную строчку каждой модели, информация о которой должна сохраняться: 'history = HistoricalRecords()'. Затем следует провести синхронизацию с базой ( >>> python manage.py syncdb). Метод all() добавленного поля истории возвращает все изменения. Пример: print Student.objects.all()[0].history.all()[0] #print last action
+
+Commands: modelsinfo - команда, которая выводит все группы и студентов по группам. Пример: >>> python manage.py modelsinfo
+
+Testcases: GroupTestCase самостоятельно авторизируется на сайте, создают новую группу, в ней создает студента, после чего завершает сессию.
+
