@@ -1,12 +1,14 @@
-Middlewares: QueryStatistic на всех страницах добавляет количество и время SQL запросов.
+Profiles: login - Admin, password - Gfhjkm.
 
-Context Processors: django.conf.settings добавлено в контекст шаблонов.
+Middlewares: QueryStatistic print count and time of SQL queries in all pages of website.
 
-Templatetags: edit_link принимает любой объект и рендерит ссылку на его изменение в панели администратора. Пример: {% load edit_link %}{% edit_link user.profile %}
+Context Processors: django.conf.settings is added to context.
 
-Signals: django_history - модифицированное (упрощенное) open-source приложение для хранения в базе записей и создании/редактировании/удалении объектов. Необходимо добавить следущую строку для импорта поля истории в файле моделей: 'from django_history.models import HistoricalRecords'. Необходимо добавить данную строчку каждой модели, информация о которой должна сохраняться: 'history = HistoricalRecords()'. Затем следует провести синхронизацию с базой ( >>> python manage.py syncdb). Метод all() добавленного поля истории возвращает все изменения. Пример: print Student.objects.all()[0].history.all()[0] #print last action
+Templatetags: edit_link is a template tag that gets any model object and renders link of change view in admin interface. Example of use: {% load edit_link %}{% edit_link user.profile %}
 
-Commands: modelsinfo - команда, которая выводит все группы и студентов по группам. Пример: >>> python manage.py modelsinfo
+Signals: django_history is a modified open-source app for creating a notes in database when model is creating/editing/deleting. Add these line for import field type: 'from django_history.models import HistoricalRecords'. Add these line to the model for which notes must be kept: 'history = HistoricalRecords()'. And then sync models with database ( >>> python manage.py syncdb). Method all() of field history return all notes for this object. Example: print My.Profile.objects.all()[0].history.all()[0] #print last action
 
-Testcases: GroupTestCase самостоятельно авторизируется на сайте, создают новую группу, в ней создает студента, после чего завершает сессию.
+Commands: modelsinfo is a command for printing all student groups and students of each group. Example of use: >>> python manage.py modelsinfo
+
+Testcases: GroupTestCase logins, create new student group, create new student is this group and logout.
 
